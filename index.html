@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Joker | Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="#" class="logo"><img src="assets/logo.png"></a>
+            <div class="toggle"><img src="assets/toggle.png"></div>
+        </header>
+        <div class="banner">
+            <div class="content">
+                <h2>Put on a <span>Happy</span> Face</h2>
+                <p>The Mughal Empire was founded by Babur who was descended of the
+                   Timur from father side and Genghis Khan from mother side.
+                    Here is the list of the Great Mughal Emperors of India which is very
+                    he Mughal Empire was founded by Babur who was descended of the
+                   Timur from father side and Genghis Khan from mother side.
+                </p>
+                <a class="play" onclick="toggle();"><img src="assets/play.png">Watch Trailer</a>
+                <div class="slide"></div>
+                <ul class="sci">
+                    <li><a href="#"><img src="assets/facebook.png"></a></li>
+                    <li><a href="#"><img src="assets/instagram.png"></a></li>
+                    <li><a href="#"><img src="assets/twitter.png"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="trailer" >
+             <video src="assets/JOKER - Final Trailer - Now Playing In Theaters.mp4" controls="true"></video>
+            <img src="assets/close.png" onclick="toggle();" class="close">
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function toggle(){
+        var close_button = document.querySelector(".trailer")
+        close_button.classList.toggle("close_button")
+        var video = document.querySelector('video')
+        video.currentTime = 0;
+        video.pause();
+    }
+</script>
+
+
+</html>

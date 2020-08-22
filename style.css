@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Code start from here */
+.wrapper{
+    background-image: url("assets/bg.jpg");
+    background-position:center;
+    min-height: 100vh;
+    background-size: cover;
+
+}
+header {
+    position: static;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+header .logo{
+    max-width: 120px;
+}
+header .toggle{
+    max-width: 60px;
+    cursor: pointer;
+}
+header .logo img, header .toggle img{
+    max-width: 100%;
+}
+
+.banner{
+    margin-top: 50px;
+    width: 100%;
+    padding: 0px 100px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner .content{
+    max-width: 550px;
+}
+.banner .content h2{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    color:#fff;
+    letter-spacing: 0.1em;
+
+}
+.banner .content h2 span{
+    font-weight: 800;
+}
+.banner .content p{
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 15px 0 35px;
+}
+.play{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.play img{
+    margin-right: 10px;
+    max-width: 50px;
+}
+.sci {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sci li{
+    list-style: none;
+}
+.sci li a {
+    text-decoration: none;
+}
+.sci li a img{
+    filter: invert(1);
+    transform: scale(0.6);
+}
+.slide{
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 125px);
+    width: 250px;
+    height: 150px;
+    background: url("assets/joker.png");
+    background-size: cover;
+    animation: slide 15s linear infinite;
+}
+@keyframes slide{
+    0%,100% {
+        background-position: top;
+
+    }
+    45%,55%{
+        background-position: bottom;
+    }
+}
+.trailer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.95);
+    visibility: hidden;
+    opacity: 0;
+}
+.close_button{
+    visibility: visible;
+    opacity: 1;
+}
+.trailer video{
+    max-width: 900px;
+    outline: none;
+}
+.trailer .close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    filter: invert(1);
+    max-width: 25px;
+}
+@media (max-width: 990px)
+{
+    header {
+        padding: 20px 50px;
+    }
+    header .logo{
+        max-width: 80px;
+    }
+    header .toggle{
+        max-width: 40px;
+    }
+    .banner{
+        margin-top: 20px;
+        padding: 0px 50px;
+    }
+    .banner .content{
+        margin-top: 20px;
+    }
+    .banner .content h2{
+        font-size: 2em;
+        letter-spacing: 0.05em;
+    }
+    .banner .content p{
+        font-size: 1em;
+        letter-spacing: 0.01em;
+    }
+    .play{
+        margin-bottom: 20px;
+    }
+    .slide{
+        position: static;
+        padding: 20px 0px;
+    }
+    .sci{
+        position: absolute;
+        top: initial;
+        right: initial;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row
+    }
+    .sci li{
+        margin:0px 5px;
+    }
+    .trailer video{
+        max-width: 90%;
+        outline: none;
+    }
+}
